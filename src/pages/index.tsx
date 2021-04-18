@@ -36,7 +36,7 @@ const IndexPage: React.FunctionComponent<IndexPageProps> = ({ data }) => {
       </Heading>
 
       <Bio>
-        I am a software engineer based in Queens, NY. When I am not coding, there is a good chance you'll catch me playing basketball, or if the weather permits, hiking with my dogs.
+        I am a software engineer based in Queens, NY. When I am not coding, there is a good chance you'll catch me playing basketball, or if the weather permits, hiking with <a href="https://www.instagram.com/kona.maji/" target="blank">my dogs</a>.
       </Bio>
     </Layout>
   );
@@ -57,22 +57,22 @@ export const query = graphql`
 
 const Heading = styled.div`
   margin-bottom: 0.5rem;
-`
+`;
 
 const Highlight = styled.div`
   font-size: 2rem;
   line-height: 1;
-`
+`;
 const SubHighlight = styled.div`
   font-family: 'Playfair Display', serif;
   font-size: 1rem;
   margin-top: 5px;
   max-width: 222px;
-`
+`;
 
 const Bio = styled.p`
   text-indent: 170px;
-`
+`;
 
 const ImageContainer = styled.div`
   border-radius: 50px;
@@ -90,6 +90,6 @@ const Image = styled.img`
   margin: 0;
   max-width: none;
   min-width: 120px;
-`
+`;
 
 export default IndexPage;

@@ -1,25 +1,31 @@
 import * as React from "react";
-import { Link } from "gatsby";
 import { TiSocialInstagram, TiSocialLinkedin, TiThMenu } from 'react-icons/ti';
 import styled from 'styled-components';
+
+import { FlexContainer } from '../FlexContainer/flex-container';
 
 const LINKEDIN_URL: string = "https://www.linkedin.com/in/supuilam/";
 const INSTAGRAM_URL: string = "https://www.instagram.com/bammbony/";
 
+interface MainHeaderProps {
+  toggleNav(): void;
+}
 
-export const MainHeader: React.FunctionComponent = () => (
+export const MainHeader: React.FunctionComponent<MainHeaderProps> = (props) => (
   <Header>
-    <FlexBox justify="space-between">
-      <TiThMenu />
-      <FlexBox>
-        <SocialLink href={INSTAGRAM_URL}>
+    <FlexContainer justify="space-between">
+      <NavMenuButton onClick={props.toggleNav} >
+        <TiThMenu />
+      </NavMenuButton>
+      <FlexContainer>
+        <SocialLink href={INSTAGRAM_URL} target="blank">
           <TiSocialInstagram />
         </SocialLink>
-        <SocialLink href={LINKEDIN_URL}>
+        <SocialLink href={LINKEDIN_URL} target="blank" >
           <TiSocialLinkedin />
         </SocialLink>
-      </FlexBox>
-    </FlexBox>
+      </FlexContainer>
+    </FlexContainer>
   </Header>
 );
 
@@ -32,13 +38,6 @@ const Header = styled.header`
   width: 100%;
 `;
 
-const FlexBox = styled.div<{ justify?: string; }>`
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: ${props => props.justify ?? 'center'};
-`;
-
 const SocialLink = styled.a`
   font-size: 1.25rem;
   padding: 10px;
@@ -47,4 +46,15 @@ const SocialLink = styled.a`
   &:visited {
     color: inherit;
   };
+
+  &:hover, &:focus {
+    background: #ccc;
+    outline: none;
+  }
+`;
+
+const NavMenuButton = styled.button`
+  background: none;
+  border: none;
+  padding: 10px;
 `;
