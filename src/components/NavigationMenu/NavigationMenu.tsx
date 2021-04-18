@@ -11,19 +11,15 @@ interface MainNavProps {
 }
 
 interface NavigationMenuProps extends MainNavProps {
-  toggleNav(): void;
+  closeNavMenu(): void;
 }
 
-export const NavigationMenu: React.FunctionComponent<NavigationMenuProps> = ({ open, toggleNav }) => {
-
-  const closeMenu = () => {
-    if (open) toggleNav();
-  };
+export const NavigationMenu: React.FunctionComponent<NavigationMenuProps> = ({ open, closeNavMenu }) => {
 
   return (
     <MainNav open={open}>
       <FlexContainer direction="column">
-        <CloseMenuButton onClick={closeMenu}>
+        <CloseMenuButton onClick={closeNavMenu}>
           <TiDeleteOutline />
         </CloseMenuButton>
         <NavLink to="/">Home</NavLink>
@@ -39,14 +35,14 @@ const NavLink = styled(Link)`
   font-family: futura;
   font-size: 1.5rem;
   font-variant: small-caps;
-  margin-bottom: 1rem;
+  padding: 1rem 0;
   text-align: center;
   text-decoration: none;
   width: 100%;
 
   &:hover, &:focus {
+    background: #444;
     cursor: pointer;
-    text-decoration: underline;
     outline: none;
   }
 `;
@@ -56,12 +52,16 @@ const CloseMenuButton = styled.button`
   border: none;
   color: whitesmoke;
   font-size: 1.5rem;
-  margin 1rem;
+  padding: 1rem 0;
   width: 100%;
 
   &:focus {
-    cursor: pointer;
     outline: none;
+  }
+
+  &:hover {
+    background: #444;
+    cursor: pointer;
   }
 `;
 

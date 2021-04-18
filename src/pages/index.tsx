@@ -36,7 +36,7 @@ const IndexPage: React.FunctionComponent<IndexPageProps> = ({ data }) => {
       </Heading>
 
       <Bio>
-        I am a software engineer based in Queens, NY. When I am not coding, there is a good chance you'll catch me playing basketball, or if the weather permits, hiking with <a href="https://www.instagram.com/kona.maji/">my dogs</a>.
+        I am a software engineer based in Queens, NY. When I am not coding, there is a good chance you'll catch me playing basketball, or if the weather permits, hiking with <a href="https://www.instagram.com/kona.maji/" target="blank">my dogs</a>.
       </Bio>
     </Layout>
   );
