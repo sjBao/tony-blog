@@ -6,11 +6,15 @@ import styled from 'styled-components';
 const LINKEDIN_URL: string = "https://www.linkedin.com/in/supuilam/";
 const INSTAGRAM_URL: string = "https://www.instagram.com/bammbony/";
 
+interface MainHeaderProps {
+  toggleNav(): void;
+}
 
-export const MainHeader: React.FunctionComponent = () => (
+export const MainHeader: React.FunctionComponent<MainHeaderProps> = (props) => (
+
   <Header>
     <FlexBox justify="space-between">
-      <TiThMenu />
+      <TiThMenu onClick={props.toggleNav} />
       <FlexBox>
         <SocialLink href={INSTAGRAM_URL}>
           <TiSocialInstagram />

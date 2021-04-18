@@ -12,6 +12,7 @@ import styled from 'styled-components';
 
 import "@fontsource/playfair-display";
 import { MainHeader } from "../Header/header";
+import { NavigationMenu } from '../NavigationMenu/NavigationMenu';
 import "./layout.css";
 
 interface LayoutProps {
@@ -29,9 +30,16 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
     }
   `);
 
+  const [isNavOpen, setIsNavOpen] = React.useState<boolean>(false);
+  const toggleNav = () => setIsNavOpen(!isNavOpen);
+
   return (
     <>
-      <MainHeader />
+      <MainHeader toggleNav={toggleNav} />
+      <NavigationMenu
+        open={isNavOpen}
+        toggleNav={toggleNav}
+      />
       <Section>
         <Main>{children}</Main>
       </Section>
