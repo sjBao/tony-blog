@@ -72,7 +72,7 @@ const Overlay = styled.div<{ open?: boolean; }>`
   position: fixed;
   top: 0;
   visibility: ${({ open }) => open ? 'visible' : 'hidden'};
-  width: 100vh;
+  width: 100vw;
   z-index: 1;
   transition: visibility 0.3s, background 0.3s, backdrop-filter 0.3s;
 
