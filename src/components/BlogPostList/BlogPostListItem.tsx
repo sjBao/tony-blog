@@ -33,7 +33,7 @@ export const BlogPostListItem: React.FunctionComponent<BlogPostListItemProps> = 
       {
         <div>
           <DateTag>{props.frontmatter.date}</DateTag>{
-            props.frontmatter.tags && props.frontmatter.tags?.map(tag => <TagLink to={`/blog?${tag}`}>{tag}</TagLink>)
+            props.frontmatter.tags && props.frontmatter.tags?.map(tag => <TagLink key={tag} to={`/blog?${tag}`}>{tag}</TagLink>)
           }
         </div>
       }
