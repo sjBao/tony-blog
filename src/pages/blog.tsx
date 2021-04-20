@@ -22,7 +22,7 @@ const BlogPage: React.FunctionComponent<BlogPageProps> = ({ data }) => {
 
 export const query = graphql`
 {
-  allMarkdownRemark {
+  allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
     edges {
       node {
         id
