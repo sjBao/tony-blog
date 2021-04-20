@@ -11,7 +11,6 @@ export interface BlogPageProps {
 }
 
 const BlogPage: React.FunctionComponent<BlogPageProps> = ({ data }) => {
-  // console.log(data);
   return (
     <Layout>
       <h1>Blog</h1>
@@ -35,8 +34,10 @@ export const query = graphql`
           id
         }
         frontmatter {
-          title
+          date
           description
+          tags
+          title
         }
       }
     }
