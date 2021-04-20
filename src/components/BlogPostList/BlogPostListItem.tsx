@@ -23,7 +23,6 @@ export interface BlogPageListItemDataModel {
 export interface BlogPostListItemProps extends BlogPageListItemDataModel { }
 
 export const BlogPostListItem: React.FunctionComponent<BlogPostListItemProps> = (props) => {
-  console.log(props);
   return (
     <BlogPostItemContainer>
       <BlogPostLink to={props.fields.slug}>
