@@ -8,25 +8,31 @@ import { FlexContainer } from '../components/FlexContainer/flex-container';
 
 interface IndexPageProps {
   data: {
-    allFile: {
-      edges: IndexPageImageModel[];
+    file: {
+      childImageSharp: {
+        gatsbyImageData: {
+          images: IndexPageImageModel;
+        };
+      };
     };
   };
 }
 interface IndexPageImageModel {
-  node: {
-    id: string;
-    publicURL: string;
+  fallback: {
+    sizes: string;
+    src: string;
+    srcSet: string;
   };
 }
 
 const IndexPage: React.FunctionComponent<IndexPageProps> = ({ data }) => {
+  console.log(data);
   return (
     <Layout>
       <Heading className="heading">
         <FlexContainer justify="flex-start">
           <ImageContainer>
-            <Image src={data.allFile.edges[0]?.node.publicURL} alt="maji" />
+            <Image src={data.file.childImageSharp.gatsbyImageData.images.fallback.src} alt="maji" />
           </ImageContainer>
 
           <FlexContainer direction="column" align="flex-start">
@@ -44,12 +50,9 @@ const IndexPage: React.FunctionComponent<IndexPageProps> = ({ data }) => {
 
 export const query = graphql`
   query {
-    allFile(filter: {id: {eq: "d9b4b835-ad68-5f84-9ddc-25c6559fb72e"}}) {
-      edges {
-        node {
-          id
-          publicURL
-        }
+    file(relativePath: {eq: "maji.jpg"}) {
+      childImageSharp {
+        gatsbyImageData(formats: PNG)
       }
     }
   }
