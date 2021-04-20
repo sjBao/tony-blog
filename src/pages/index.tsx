@@ -26,7 +26,7 @@ const IndexPage: React.FunctionComponent<IndexPageProps> = ({ data }) => {
       <Heading className="heading">
         <FlexContainer justify="flex-start">
           <ImageContainer>
-            <Image src={data.allFile.edges[0].node.publicURL} alt="" />
+            <Image src={data.allFile.edges[0]?.node.publicURL} alt="maji" />
           </ImageContainer>
 
           <FlexContainer direction="column" align="flex-start">

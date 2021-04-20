@@ -13,7 +13,7 @@ export interface BlogPageProps {
 const BlogPage: React.FunctionComponent<BlogPageProps> = ({ data }) => {
   return (
     <Layout>
-      <h1>Blog</h1>
+      <h1>My Thoughts, Learnings, Etc</h1>
       <h4>Posts: {data.allMarkdownRemark.edges.length}</h4>
       <BlogPostList edges={data.allMarkdownRemark.edges} />
     </Layout>
