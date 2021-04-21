@@ -1,7 +1,8 @@
 ---
 title: 'Showboat - Roland Lazenby'
 date: April 20th, 2021
-description: 'This is a biography about Kobe Bryant, released shortly after his retirement but before him winning an oscar award. Still, it gives an itimate look Kobe\'s journey and family history that helped me see him from a diffrent lens.'
+date read: Febuary 2020
+description: This is a biography about Kobe Bryant, released shortly after his retirement but before him winning an oscar award. Still, it gives an itimate look Kobe\'s journey and family history that helped me see him from a diffrent lens.
 tags:
   - audiobook notes
 ---
