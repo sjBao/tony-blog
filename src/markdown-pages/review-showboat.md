@@ -1,9 +1,9 @@
 ---
 title: 'Showboat - Roland Lazenby'
 date: April 20th, 2021
-description: 'test'
+description: 'This is a biography about Kobe Bryant, released shortly after his retirement but before him winning an oscar award. Still, it gives an itimate look Kobe\'s journey and family history that helped me see him from a diffrent lens.'
 tags:
-  - audiobook review
+  - audiobook notes
 ---
 
 ![](https://upload.wikimedia.org/wikipedia/commons/8/82/Kobe_Bryant_2015.jpg)
@@ -11,7 +11,7 @@ tags:
 ### Why I decided to listen to this:
 One late Sunday afternoon (January 26th, 2020), I was getting ready to return home from a free-trial session of hot yoga. Feeling relaxed on what was otherwise a pretty good Sunday, I was plugging in my home address when I noticed on the newsfeed of my phone: "N.B.A. Star Kobe Bryant Dies in California Helicopter Crash". I couldn't believe it at first, but, as I saw friends, family, and other notible media figures respond to the tragedy, I realized that Kobe has passed, and it was hitting me a lot harder than I had expected.
 
-I started watching baskebtall in the mid 2000's, so the basketball legends I became acquainted with were the likes of Allen Iverson, Carmelo Anthony, Tim Duncan, Paul Piece, Tracy Mcgracy, Yao Ming, Shaq, and of course Kobe Bryant. It wasn't until Kobe retired that I realized I've taken for granted what he brough to the league. And similarly, it wasn't until he passed did I realize I took for granted what he brought to world by how he lived life. Listening to his biography helped me mourn.
+I started watching baskebtall in the mid 2000's, so the basketball legends I became acquainted with were the likes of Allen Iverson, Carmelo Anthony, Tim Duncan, Paul Piece, Tracy Mcgracy, Yao Ming, Shaq, and of course Kobe Bryant. It wasn't until Kobe retired that I realized I've taken for granted what he brough to the league. And similarly, it wasn't until he passed did I realize I took for granted what he brought to a generation of hoop fans by how he lived life. Listening to his biography helped me mourn.
 
 ### Some notes I took (Feb 2020):
 **1. How does this person inspire you to act?**
