@@ -1,5 +1,6 @@
 ---
 title: Hello World
+category: blog-post
 date: April 19th, 2021
 description: This is my first blog post on this site.
 tags:

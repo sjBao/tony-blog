@@ -1,6 +1,9 @@
 const path = require('path');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+const BookNoteTemplate = path.resolve(`./src/templates/book-note.tsx`);
+const BlogPostTemplate = path.resolve(`./src/templates/blog-post.tsx`);
+
 /**
  * Implement Gatsby's Node APIs in this file.
  *
@@ -33,19 +36,32 @@ exports.createPages = ({ graphql, actions }) => {
             fields {
               slug
             }
+            frontmatter {
+              category
+            }
           }
         }
       }
     }
   `).then(result => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.fields.slug,
-        component: path.resolve(`./src/templates/blog-post.tsx`),
-        context: {
-          slug: node.fields.slug
-        }
-      });
+      if (node.frontmatter.category === "book-note") {
+        createPage({
+          path: node.fields.slug,
+          component: BookNoteTemplate,
+          context: {
+            slug: node.fields.slug
+          }
+        });
+      } else {
+        createPage({
+          path: node.fields.slug,
+          component: BlogPostTemplate,
+          context: {
+            slug: node.fields.slug
+          }
+        });
+      }
     });
   });
 };

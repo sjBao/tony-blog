@@ -2,6 +2,8 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
+import { TagList } from '../TagList/TagList';
+
 interface BlogPageFields {
   slug: string;
 }
@@ -32,7 +34,7 @@ export const BlogPostListItem: React.FunctionComponent<BlogPostListItemProps> = 
       {
         <div>
           <DateTag>{props.frontmatter.date}</DateTag>{
-            props.frontmatter.tags && props.frontmatter.tags?.map(tag => <TagLink key={tag} to={`/blog?${tag}`}>{tag}</TagLink>)
+            props.frontmatter.tags && <TagList tags={props.frontmatter.tags} />
           }
         </div>
       }
@@ -76,26 +78,6 @@ const DateTag = styled.time`
   &:last-child {
     &:after {
       content: ' ';
-    }
-  }
-`;
-
-const TagLink = styled(Link)`
-  color: #444;
-  font-size: 0.8rem;
-  text-decoration: none;
-
-  &:after {
-    content: ', ';
-  }
-
-  &:hover {
-    text-decoration: underline;
-  }
-
-  &:last-child {
-    &:after {
-      content: '';
     }
   }
 `;
