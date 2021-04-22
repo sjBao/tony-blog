@@ -1,9 +1,21 @@
-import React from 'react';
+import * as React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout/layout';
 
-const BlogPost = ({ data }) => {
+interface BlogPostProps {
+  data: {
+    markdownRemark: {
+      html: string;
+      frontmatter: {
+        title: string;
+      };
+    };
+  };
+}
+
+const BlogPost: React.FunctionComponent<BlogPostProps> = ({ data }) => {
   const post = data.markdownRemark;
+  console.log(data);
 
   return (
     <Layout>

@@ -1,13 +1,14 @@
 ---
-title: 'Showboat - Roland Lazenby'
+book image: //ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0316387142&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=slam0e8-20)
+amazon link: https://amzn.to/2PdXfid
+category: book-note
 date: April 20th, 2021
 date read: Febuary 2020
-description: This is a biography about Kobe Bryant, released shortly after his retirement but before him winning an oscar award. Still, it gives an itimate look Kobe\'s journey and family history that helped me see him from a diffrent lens.
+description: This is a biography about Kobe Bryant, released shortly after his retirement but before him winning an oscar award. Still, it gives an itimate look Kobe's journey and family history that helped me see him from a diffrent lens.
 tags:
   - audiobook notes
+title: 'Showboat - Roland Lazenby'
 ---
-
-![](https://upload.wikimedia.org/wikipedia/commons/8/82/Kobe_Bryant_2015.jpg)
 
 ### Why I decided to listen to this:
 One late Sunday afternoon (January 26th, 2020), I was getting ready to return home from a free-trial session of hot yoga. Feeling relaxed on what was otherwise a pretty good Sunday, I was plugging in my home address when I noticed on the newsfeed of my phone: "N.B.A. Star Kobe Bryant Dies in California Helicopter Crash". I couldn't believe it at first, but, as I saw friends, family, and other notible media figures respond to the tragedy, I realized that Kobe has passed, and it was hitting me a lot harder than I had expected.
