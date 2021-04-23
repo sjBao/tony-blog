@@ -50,7 +50,7 @@ const BookNote: React.FunctionComponent<BookNoteProps> = ({ data }) => {
 
           <Description>{description}</Description>
         </BookNoteHeading>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <article dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
   );
@@ -67,7 +67,7 @@ const BookFigure = styled.figure`
   }
 `;
 
-const BookNoteHeading = styled.div`
+const BookNoteHeading = styled.header`
   margin-bottom: 3.5rem;
 
   &::after {

@@ -20,8 +20,10 @@ const BlogPost: React.FunctionComponent<BlogPostProps> = ({ data }) => {
   return (
     <Layout>
       <div>
-        <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <header>
+          <h1>{post.frontmatter.title}</h1>
+        </header>
+        <article dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
   );
