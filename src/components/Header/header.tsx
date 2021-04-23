@@ -30,12 +30,13 @@ export const MainHeader: React.FunctionComponent<MainHeaderProps> = (props) => (
 );
 
 
-const Header = styled.header`
+const Header = styled.div`
   background: whitesmoke;
   height: 50px;
   padding: 0 10%;
   position: fixed;
   width: 100%;
+  z-index: 2;
 `;
 
 const SocialLink = styled.a`
