@@ -36,11 +36,15 @@ Used when you need your component to perform some side effect as a reaction to s
 ##### Perform side-effect once onmount:
 ```javascript
 const TodoList = () => {
-  const [todoList, setTodoList] = React.useState([]);
+  const [todoList, setTodoList] = useState([]);
 
-  React.useEffect(async () => {
+  const loadTodoList = async () => {
     const response = await fetch(/* get todo data from somewhere asynchronously */);
     setTodoList(response.data);
+  }
+
+  useEffect(() => {
+    loadTodoList()
   }, []) // the second argument is empty, so this useEffect will respond to no changes and only execute once.
 
   return(
@@ -53,14 +57,18 @@ const TodoList = () => {
 ##### Perform side-effect only when certain value changes:
 ```javascript
 const TodoList = () => {
-  const [todoList, setTodoList] = React.useState([]);
-  const [todoFilter, setTodoFilter] = React.useState('');
+  const [todoList, setTodoList] = useState([]);
+  const [todoFilter, setTodoFilter] = useState('');
 
-  React.useEffect(async () => {
+  const loadTodoList = async () => {
+    const response = fetch(/* api url with filter params */`?filter=${todoFilter}`);
+    setTodoList(response.data);
+  }
+
+  useEffect(() => {
     // assuming that the backend will provide all the todo data, we just have to specify the filter.
     // this way, we only for new todos when the filter changes, not during every render.
-    const response = await fetch(/* get todo data from somewhere asynchronously with filter option */`?filter=${todoFilter}`);
-    setTodoList(response.data);
+    loadTodoLst();
   }, [todoFilter]);
 
   return(
@@ -70,13 +78,33 @@ const TodoList = () => {
   )
 }
 ```
-### useMemo
-### useCallback
-Like use memo but returns the function (as opposed to returning the value of the function in useMemo). Can also be used to check referential equality.
 ### useRef
+Creates a reference to a value which is preserved (not recreated/reassigned) when component re-renders. Useful if you need to remember a previous prop, and or a previous state.
+```javascript
+const MyComponent = (props) => {
+  const propsRef = useRef()
+}
+```
+### [useMemo](https://reactjs.org/docs/hooks-reference.html#usememo)
+```javascript
+const memoizedVal = React.useMemo(() => resourceIntensiveFunction(a,b), [a, b])
+```
+• Resource intensive from a big O standpoint.
+• Also used for referential equality checks.
+### useCallback
+Like use memo but __returns a callback function__. Can also be used to check referential equality.
+```javascript
+const memoizedFunction = React.useCallback(() => { /* ... */ }, [a, b]);
+```
+Another way of thinking about it (the code above is equivalent to):
+```javascript
+const memoizedFunction = React.useMemo(() => fn(){ /* ... */ }, [a, b]);
+```
 ### useReducer
 ```javascript
 const reducerFn = function() {}
 const initialState = { count: 0 }
 const [ state, dispatch ] = useReducer(reducerFn, initialState)
+
+// ... more to come...
 ```
