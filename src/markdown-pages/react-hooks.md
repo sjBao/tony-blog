@@ -11,7 +11,7 @@ tags:
 Quick reference guide for myself for react hooks.
 
 
-### useState
+### [useState]((https://reactjs.org/docs/hooks-reference.html#useEffect))
 ```javascript
 const MyReactComponent = () => {
   const [count, setCount] = React.useState(4);
@@ -30,7 +30,7 @@ const MyReactComponent = () => {
 * setState() will cause the component to re-render.
 * setState() overwrites the previous state. So if you use an object for state, make sure you merge the old object.
 
-### useEffect
+### [useEffect](https://reactjs.org/docs/hooks-reference.html#useEffect)
 Used when you need your component to perform some side effect as a reaction to some change. If you're used lifecycle methods from class components, you can use this hook to recreate *componentDidMount* and *componentDidUpdate*.
 
 ##### Perform side-effect once onmount:
@@ -78,7 +78,7 @@ const TodoList = () => {
   )
 }
 ```
-### useRef
+### [useRef](https://reactjs.org/docs/hooks-reference.html#useRef)
 Creates a reference to a value which is preserved (not recreated/reassigned) when component re-renders. Useful if you need to remember a previous prop, and or a previous state.
 ```javascript
 const MyComponent = (props) => {
@@ -91,7 +91,7 @@ const memoizedVal = React.useMemo(() => resourceIntensiveFunction(a,b), [a, b])
 ```
 • Resource intensive from a big O standpoint.
 • Also used for referential equality checks.
-### useCallback
+### [useCallback](https://reactjs.org/docs/hooks-reference.html#useCallback)
 Like use memo but __returns a callback function__. Can also be used to check referential equality.
 ```javascript
 const memoizedFunction = React.useCallback(() => { /* ... */ }, [a, b]);
@@ -100,7 +100,7 @@ Another way of thinking about it (the code above is equivalent to):
 ```javascript
 const memoizedFunction = React.useMemo(() => fn(){ /* ... */ }, [a, b]);
 ```
-### useReducer
+### [useReducer](https://reactjs.org/docs/hooks-reference.html#useReducer)
 ```javascript
 const reducerFn = function() {}
 const initialState = { count: 0 }
