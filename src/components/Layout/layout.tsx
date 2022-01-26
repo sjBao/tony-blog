@@ -87,6 +87,8 @@ const Section = styled.section`
   grid-template-columns: 10% 80% 10%;
   grid-template-rows: 100px auto;
   height: 100%;
+  margin: 0 auto;
+  max-width: 900px;
 `;
 
 export default Layout;

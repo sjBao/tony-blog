@@ -66,19 +66,19 @@ const CloseMenuButton = styled.button`
 `;
 
 const MainNav = styled.nav<MainNavProps>`
-  --menu-width: 20vw;
+  --menu-width: 200px;
   
   background-color: #222;
   color: whitesmoke;
   height: 100vh;
-  left: calc(-1 * var(--menu-width));
+  transform: translateX(calc(-1 * var(--menu-width)));
   position: fixed;
   top: 0;
-  transition: left .3s ease;
+  transition: transform .3s ease;
   width: var(--menu-width);
   z-index: 3;
 
   &[open] {
-    left: 0;
+    transform: translateX(0px);
   }
 `; 

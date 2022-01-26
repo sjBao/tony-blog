@@ -42,7 +42,10 @@ const IndexPage: React.FunctionComponent<IndexPageProps> = ({ data }) => {
       </Heading>
 
       <Bio>
-        I am a software engineer based in Queens, NY. When I am not coding, there is a good chance you'll catch me playing basketball, or if the weather permits, hiking with <a href="https://www.instagram.com/kona.maji/" target="blank">my dogs</a>.
+        I am a software engineer based in Queens, New York who currently works at <a href="https://www.gemini.com/about" target="_blank">Gemini.</a>
+        In the past, I've been a developer at companies such as <a href="https://www.sephora.sg/" target="_blank">Sephora</a> and <a href="https://www.inrhythm.com/" target="_blank">InRhythm</a>.
+        <br/><br/>
+        When I am not coding, there is a good chance you'll catch me playing basketball, or if the weather permits, hiking with <a href="https://www.instagram.com/kona.maji/" target="blank">my dogs</a>.
       </Bio>
     </Layout>
   );
