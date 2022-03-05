@@ -1,3 +1,10 @@
+// color palette;
+// #006666	(0,102,102)
+// #9dbcbc	(157,188,188)
+// #fff5bb	(255,245,187)
+// #6b6b6b	(107,107,107)
+// #b7b7b7	(183,183,183)
+
 import styled from 'styled-components';
 
 type align = "center" | "flex-start" | "flex-end";
