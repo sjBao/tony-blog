@@ -34,7 +34,6 @@ const NavLink = styled(Link)`
   display: block;
   font-family: futura;
   font-size: 1.5rem;
-  font-variant: small-caps;
   padding: 1rem 0;
   text-align: center;
   text-decoration: none;
@@ -74,7 +73,7 @@ const MainNav = styled.nav<MainNavProps>`
   transform: translateX(calc(-1 * var(--menu-width)));
   position: fixed;
   top: 0;
-  transition: transform .3s ease;
+  transition: transform 0.1s ease-in;
   width: var(--menu-width);
   z-index: 3;
 

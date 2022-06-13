@@ -51,7 +51,7 @@ const BlogPostItemContainer = styled.div`
 
 const BlogPostLink = styled(Link)`
   color: rgba(75, 114, 91, 1);
-  font-family: futura;
+  font-family: georgia, serif;
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
   padding-bottom: 0.67rem;
